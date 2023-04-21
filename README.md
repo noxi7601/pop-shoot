@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="repo/banner.png" alt="banner">
+  <img src="assets/repo/banner.png" alt="banner">
 
   [![languages](https://img.shields.io/github/languages/top/kiwphi/pop-shoot?style=for-the-badge)](https://github.com/kiwphi/pop-shoot)
   [![stars](https://img.shields.io/github/stars/kiwphi/pop-shoot?style=for-the-badge)](https://github.com/kiwphi/pop-shoot/stargazers)
@@ -18,10 +18,10 @@ The game includes 5 stages & bosses, as well as many cool features such as bulle
 
 # screenshots
 
-<img src="repo/screenshot1.png" alt="screenshot1">
-<img src="repo/screenshot2.png" alt="screenshot2">
-<img src="repo/screenshot3.png" alt="screenshot3">
-<img src="repo/screenshot4.png" alt="screenshot4">
+<img src="assets/repo/screenshot1.png" alt="screenshot1">
+<img src="assets/repo/screenshot2.png" alt="screenshot2">
+<img src="assets/repo/screenshot3.png" alt="screenshot3">
+<img src="assets/repo/screenshot4.png" alt="screenshot4">
 
 # debugging
 
