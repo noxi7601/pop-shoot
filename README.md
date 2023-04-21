@@ -1,11 +1,11 @@
 <div align="center">
   <img src="assets/repo/banner.png" alt="banner">
 
-  [![languages](https://img.shields.io/github/languages/top/kiwphi/pop-shoot?style=for-the-badge)](https://github.com/kiwphi/pop-shoot)
-  [![stars](https://img.shields.io/github/stars/kiwphi/pop-shoot?style=for-the-badge)](https://github.com/kiwphi/pop-shoot/stargazers)
-  [![forks](https://img.shields.io/github/forks/kiwphi/pop-shoot?style=for-the-badge)](https://github.com/kiwphi/pop-shoot/forks)
-  [![license](https://img.shields.io/github/license/kiwphi/pop-shoot?style=for-the-badge)](https://github.com/kiwphi/pop-shoot/blob/main/LICENSE)
-  [![commit](https://img.shields.io/github/last-commit/kiwphi/pop-shoot?style=for-the-badge)](https://github.com/kiwphi/pop-shoot/commits/main)
+  [![languages](https://img.shields.io/github/languages/top/kiwphi/pop-shoot?style=flat)](https://github.com/kiwphi/pop-shoot)
+  [![stars](https://img.shields.io/github/stars/kiwphi/pop-shoot?style=flat)](https://github.com/kiwphi/pop-shoot/stargazers)
+  [![forks](https://img.shields.io/github/forks/kiwphi/pop-shoot?style=flat)](https://github.com/kiwphi/pop-shoot/forks)
+  [![license](https://img.shields.io/github/license/kiwphi/pop-shoot?style=flat)](https://github.com/kiwphi/pop-shoot/blob/main/LICENSE)
+  [![commit](https://img.shields.io/github/last-commit/kiwphi/pop-shoot?style=flat)](https://github.com/kiwphi/pop-shoot/commits/main)
 </div>
 
 # pop-shoot
