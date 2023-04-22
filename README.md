@@ -88,7 +88,7 @@ This repository consists of two major parts:
 # acknowledgments
 
 :musical_note: Music by [TeknoAxe](https://open.spotify.com/artist/0Hyqsw7GWssXIOVgy36ohS)  
-:guitar: Gameover track by Tobias "Sum-1" Peterson
+:guitar: Gameover track by Tobias "Sum-1" Peterson  
 :art: Original background images by [Paul Craft](https://co.pinterest.com/paulcraftone/) & [Nate Wren](https://natewren.com)  
 :pencil2: Fonts by [Rick Hoppman](https://www.dafont.com/thaleahfat.font), [Asiyah](https://www.dafont.com/handwriting-5.font) & [Photofunia](https://photofunia.com)  
 :flying_saucer: Sprites & Audio by [Kenney.nl](https://kenney.nl), [OpenGameArt](https://opengameart.org),
