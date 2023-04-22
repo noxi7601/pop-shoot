@@ -80,10 +80,12 @@ The `Logic/State/Debugging.js` file provides some useful keybindings for jumping
 
 This repository consists of two major parts:
 
--   The _source-code_, mostly contained within the ./modules directory
+-   The _source-code_, mostly contained within the _./modules_ directory
     is under the [GNU GPL-3.0 License](https://github.com/kiwphi/pop-shoot/blob/main/LICENSE).
--   The _assets_, which are all contained within the ./assets directory were fetched from several sources
-    (mentionned in the _acknowledgments_ section) and are not under the same license. Each asset is owned by its respective author.
+-   The _assets_, which are all contained within the _./assets_ directory were fetched from multiple sources
+    and are not under the same license. Each asset is owned by its respective author, attributed in the
+    _acknowledgments_ section. If you find that your asset is used in the game and did not receive proper attribution,
+    let me know and I'll gladly add it.
 
 # acknowledgments
 
