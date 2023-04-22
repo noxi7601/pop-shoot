@@ -25,7 +25,7 @@ export const BUFFS = [
         disable: () => (game.buffcontroller.noshield = false),
     },
     {
-        text: 'ENEMIES MUTED!',
+        text: 'ENEMIES ARE MUTED!',
         enable: () => {
             game.firelasers.clear();
             game.buffcontroller.muteenemies = true;
