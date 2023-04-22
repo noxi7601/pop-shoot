@@ -16,7 +16,7 @@ export class FireLaser {
         this.direction = direction;
         this.speed = speed;
 
-        this.shattered = false;
+        this.shattered = game.buffcontroller.muteenemies ? true : false;
     }
 
     move() {

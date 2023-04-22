@@ -63,7 +63,7 @@ export class Enemy {
     // steps should be incremented by the move() method.
     step() {
         this.steps++;
-        if (this.steps % this.firingrate === 0 && !game.buffcontroller.muteenemies) {
+        if (this.steps % this.firingrate === 0) {
             this.shoot();
         }
     }
