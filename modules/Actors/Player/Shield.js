@@ -22,7 +22,7 @@ export class Shield {
                 }
             }
         };
-        setInterval(fn.bind(this), 50);
+        setInterval(fn, 50);
     }
 
     startCharging() {

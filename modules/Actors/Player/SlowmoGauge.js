@@ -28,7 +28,7 @@ export class SlowmoGauge {
                 this.startCharging();
             }
         };
-        setInterval(fn.bind(this), 50);
+        setInterval(fn, 50);
     }
 
     startCharging() {

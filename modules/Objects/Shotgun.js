@@ -13,11 +13,11 @@ export class Shotgun {
 
     setObserver() {
         let fn = () => {
-            if (!this.isLoaded() & !game.state.paused) {
+            if (!this.isLoaded() && !game.state.paused) {
                 this.charge++;
             }
         };
-        setInterval(fn.bind(this), RELOADSPEED);
+        setInterval(fn, RELOADSPEED);
     }
 
     shoot() {
