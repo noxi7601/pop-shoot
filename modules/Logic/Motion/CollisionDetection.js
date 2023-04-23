@@ -63,7 +63,7 @@ export class CollisionDetection {
         const dx = entity1.x - entity2.x;
         const dy = entity1.y - entity2.y;
 
-        const distance = Math.sqrt(dx * dx + dy * dy);
-        return distance < entity1.radius + entity2.radius;
+        const distance = dx * dx + dy * dy;
+        return distance < (entity1.radius + entity2.radius) ** 2;
     }
 }
