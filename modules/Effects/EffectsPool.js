@@ -26,6 +26,10 @@ export class EffectsPool {
         this.liveEffects.forEach((effect) => effect.move());
     }
 
+    clear() {
+        this.liveEffects = [];
+    }
+
     refresh() {
         this.liveEffects = this.liveEffects.filter((effect) => effect.duration > 0);
     }

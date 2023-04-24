@@ -120,6 +120,7 @@ export class GameState {
         game.enemies.clear(true);
         game.firelasers.clear();
         game.bluelasers.clear();
+        game.effects.clear();
         game.weathercontroller.stopWeather();
 
         // reset game state
