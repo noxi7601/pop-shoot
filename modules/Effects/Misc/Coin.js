@@ -62,11 +62,14 @@ export class Coin {
         }
     }
 
-    removeAndCount() {
-        this.blinkProgressBar();
+    // bool count = true | false
+    remove(count) {
+        if (count) {
+            this.blinkProgressBar();
+            game.audiocontroller.playSound('coin');
+            game.cashcontroller.incrementCash();
+        }
         game.effects.add(new Animation(this.x, this.y, 'smoke_normal'));
-        game.audiocontroller.playSound('coin');
-        game.cashcontroller.incrementCash();
         clearInterval(this.spinAnimation);
         this.duration = 0;
     }

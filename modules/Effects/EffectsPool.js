@@ -1,4 +1,5 @@
 import { game } from '../../app.js';
+import { Coin } from './Misc/Coin.js';
 import { Notification } from './Misc/Notification.js';
 
 export class EffectsPool {
@@ -27,7 +28,12 @@ export class EffectsPool {
     }
 
     clear() {
-        this.liveEffects = [];
+        this.liveEffects.forEach((effect) => {
+            if (effect.constructor === Coin) {
+                return effect.remove(false);
+            }
+            effect.duration = 0;
+        });
     }
 
     refresh() {

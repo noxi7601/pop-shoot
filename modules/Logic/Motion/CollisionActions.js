@@ -64,7 +64,7 @@ export class CollisionActions {
     }
 
     static CoinPlayer(coin, player) {
-        coin.removeAndCount();
+        coin.remove(true);
     }
 
     static EnemiesEnemies(enemy1, enemy2) {
