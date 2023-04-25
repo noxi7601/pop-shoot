@@ -30,6 +30,7 @@ const PHASE4_RANGLE = 105; // right lasers (closer to 90 = narrower)
 // HARDEN
 const HARDEN_RATE = 2000; // in ticks. lower = faster
 const HARDEN_TIME = 15000; // in ms
+const FLASH_RATE = 60; // in ticks. lower = faster
 
 // STATE
 const HP = 100000;
@@ -127,21 +128,21 @@ export class Abuser extends Enemy {
         if (this.steps % HARDEN_RATE === 0) {
             this.harden();
         }
+
+        if (this.hardened && this.steps % FLASH_RATE === 0) {
+            SceneUtils.flashScreen();
+        }
     }
 
     soften() {
         this.hardened = false;
-        clearInterval(this.flashInterval);
         game.audiocontroller.stopSound('siren');
-        SceneUtils.flashScreen();
         SceneUtils.shakeScreen(3, 0.5);
     }
 
     harden() {
         game.audiocontroller.playSound('siren');
         this.hardened = true;
-        this.flashInterval = setInterval(SceneUtils.flashScreen, 1000);
-        SceneUtils.flashScreen();
         SceneUtils.shakeScreen(3, 0.5);
 
         setTimeout(() => {
@@ -154,7 +155,6 @@ export class Abuser extends Enemy {
 
     die() {
         super.die();
-        clearInterval(this.flashInterval);
         game.audiocontroller.stopSound('siren');
         game.state.toggleBoss();
     }
