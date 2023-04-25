@@ -16,7 +16,7 @@ The game includes 5 stages & bosses, as well as many cool features such as bulle
 
 :joystick: [Play](https://kiwphi.github.io/pop-shoot/) (F11 to toggle full-screen)  
 :ledger: [Report Issue](https://github.com/kiwphi/pop-shoot/issues)  
-:loudspeaker: [Contribute](https://github.com/kiwphi/pop-shoot/blob/contributing-section/CONTRIBUTING.md)
+:loudspeaker: [Contribute](https://github.com/kiwphi/pop-shoot/blob/main/CONTRIBUTING.md)
 
 # screenshots
 
