@@ -172,7 +172,7 @@ export const ITEMS = {
     },
     toxic: {
         name: 'toxic',
-        activate: () => game.itemactioncontroller.startToxic(),
+        activate: () => (game.itemactioncontroller.toxic = true),
         icon: TOXIC_ICON,
         pause: TOXIC_PAUSE,
         notification: TOXIC_NOTIFICATION,

@@ -154,6 +154,7 @@ export class Abuser extends Enemy {
 
     die() {
         super.die();
+        clearInterval(this.flashInterval);
         game.audiocontroller.stopSound('siren');
         game.state.toggleBoss();
     }

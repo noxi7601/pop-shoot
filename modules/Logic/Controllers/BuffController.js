@@ -8,6 +8,13 @@ const BUFFDURATION = 15; // in seconds
 
 export class BuffController {
     constructor() {
+        this.init();
+    }
+
+    init() {
+        // clear previous timer if any
+        clearInterval(this.timer);
+
         // active-buff tracking
         this.activeBuff = false;
         this.countdown = 0;

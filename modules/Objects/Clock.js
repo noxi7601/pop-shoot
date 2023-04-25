@@ -9,6 +9,11 @@ const ACTIVE_TIME = 10;
 
 export class Clock {
     constructor() {
+        this.init();
+    }
+
+    init() {
+        clearInterval(this.charger);
         this.owned = false;
         this.active = false;
         this.countdown = 0;
@@ -38,12 +43,12 @@ export class Clock {
 
     startCharging() {
         this.countdown = CHARGING_TIME;
-        const charger = setInterval(() => {
+        this.charger = setInterval(() => {
             if (!game.state.paused) {
                 this.countdown--;
             }
             if (this.countdown <= 0) {
-                clearInterval(charger);
+                clearInterval(this.charger);
             }
         }, 1000);
     }

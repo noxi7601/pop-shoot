@@ -6,6 +6,10 @@ const NEXT_MULTIPLIER = 1.5;
 
 export class CashController {
     constructor() {
+        this.init();
+    }
+
+    init() {
         // current cash owned by player
         this.cash = 0;
 

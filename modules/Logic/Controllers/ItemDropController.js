@@ -15,6 +15,10 @@ const RATE = 80;
 
 export class ItemDropController {
     constructor() {
+        this.init();
+    }
+
+    init() {
         this.aquiredItems = [];
 
         // POOLS PREPARATION

@@ -6,9 +6,13 @@ const RELOADSPEED = 20; // in ms. charge increases by 1 for every 'reloadspeed' 
 
 export class Shotgun {
     constructor() {
+        this.init();
+        this.setObserver();
+    }
+
+    init() {
         this.charge = 100;
         this.owned = false;
-        this.setObserver();
     }
 
     setObserver() {

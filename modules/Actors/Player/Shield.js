@@ -6,9 +6,13 @@ const CHARGERATE = 1; // default charging rate if no nitrogen upgrade
 
 export class Shield {
     constructor() {
+        this.init();
+        this.setObserver();
+    }
+
+    init() {
         this.charge = 100;
         this.underfire = false;
-        this.setObserver();
         this.sprite = SHIELDSPRITE;
     }
 

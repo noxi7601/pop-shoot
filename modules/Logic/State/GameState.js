@@ -7,16 +7,10 @@ import {
     GLASSSTAGE5SPRITE,
 } from '../../Assets/Hud.js';
 import { Notification } from '../../Effects/Misc/Notification.js';
-import { CashController } from '../Controllers/CashController.js';
-import { Clock } from '../../Objects/Clock.js';
-import { BuffController } from '../Controllers/BuffController.js';
 import { Animation } from '../../Effects/Misc/Animation.js';
 import { SceneUtils } from '../../Scene/SceneUtils.js';
 import { Controls } from '../Motion/Controls.js';
-import { ItemActionController } from '../Controllers/ItemActionController.js';
-import { ItemDropController } from '../Controllers/ItemDropController.js';
 import { Debugging } from './Debugging.js';
-import { Shotgun } from '../../Objects/Shotgun.js';
 
 const STAGESPRITES = [GLASSSTAGE1SPRITE, GLASSSTAGE2SPRITE, GLASSSTAGE3SPRITE, GLASSSTAGE4SPRITE, GLASSSTAGE5SPRITE];
 const NOTIFICATION_DURATION = 400; // in ticks. higher = longer
@@ -117,11 +111,11 @@ export class GameState {
 
     replay() {
         // clear screen
+        game.weathercontroller.stopWeather();
         game.enemies.clear(true);
         game.firelasers.clear();
         game.bluelasers.clear();
         game.effects.clear();
-        game.weathercontroller.stopWeather();
 
         // reset game state
         this.time = 1;
@@ -134,14 +128,17 @@ export class GameState {
         Controls.addPauseButton();
 
         // reset player state
-        game.player.shield.charge = 100;
-        game.player.slowmogauge.charge = 100;
-        game.player.clock = new Clock();
-        game.player.shotgun = new Shotgun();
-        game.itemdropcontroller = new ItemDropController();
-        game.itemactioncontroller = new ItemActionController();
-        game.buffcontroller = new BuffController();
-        game.cashcontroller = new CashController();
+        game.player.shield.init();
+        game.player.slowmogauge.init();
+        game.player.flame.move({ smoketype: 'smoke_small' });
+        game.player.clock.init();
+        game.player.shotgun.init();
+
+        // controllers
+        game.buffcontroller.init();
+        game.itemdropcontroller.init();
+        game.itemactioncontroller.init();
+        game.cashcontroller.init();
 
         // graphics
         SceneUtils.flashScreen();

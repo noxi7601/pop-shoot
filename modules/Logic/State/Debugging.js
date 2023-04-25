@@ -1,11 +1,7 @@
 import { game, gameloop } from '../../../app.js';
 import { OrangePackage } from '../../Actors/Packages/OrangePackage.js';
 import { RedPackage } from '../../Actors/Packages/RedPackage.js';
-import { Clock } from '../../Objects/Clock.js';
-import { Shotgun } from '../../Objects/Shotgun.js';
 import { SceneUtils } from '../../Scene/SceneUtils.js';
-import { ItemActionController } from '../Controllers/ItemActionController.js';
-import { ItemDropController } from '../Controllers/ItemDropController.js';
 import { Controls } from '../Motion/Controls.js';
 
 const UNSETGAMEOVERBUTTON = 'KeyP';
@@ -74,9 +70,11 @@ export class Debugging {
         game.audiocontroller.rewindMusic();
         game.audiocontroller.updateMusic();
         game.weathercontroller.stopWeather();
+        game.buffcontroller.init();
         game.enemies.clear(true);
         game.firelasers.clear();
         game.bluelasers.clear();
+        game.effects.clear();
         game.state.addStageNotification();
     }
 
@@ -87,7 +85,6 @@ export class Debugging {
                 Controls.addMouseClicks();
                 Controls.addPauseButton();
                 game.firelasers.clear();
-                game.bluelasers.clear();
                 game.player.shield.charge = 100;
                 window.requestAnimationFrame(gameloop);
                 game.audiocontroller.updateMusic();
@@ -122,10 +119,10 @@ export class Debugging {
     static addClearItemsButton() {
         document.addEventListener('keydown', (evt) => {
             if (evt.code === CLEARITEMSBUTTON) {
-                game.itemdropcontroller = new ItemDropController();
-                game.itemactioncontroller = new ItemActionController();
-                game.player.clock = new Clock();
-                game.player.shotgun = new Shotgun();
+                game.itemdropcontroller.init();
+                game.itemactioncontroller.init();
+                game.player.clock.init();
+                game.player.shotgun.init();
             }
         });
     }

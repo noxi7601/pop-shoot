@@ -6,8 +6,12 @@ const CHARGE_DELAY = 50; // delay in ticks before start charging. lower = faster
 
 export class SlowmoGauge {
     constructor() {
-        this.charge = 100;
+        this.init();
         this.setObserver();
+    }
+
+    init() {
+        this.charge = 100;
         this.chargeDelay = CHARGE_DELAY;
     }
 

@@ -29,6 +29,17 @@ const URANIUMRATE = 0.6; // rate at which slowmo depletes (lower = slower. defau
 
 export class ItemActionController {
     constructor() {
+        this.init();
+
+        // set toxic-waste observer
+        this.toxicObserver = setInterval(() => {
+            if (game.state.slowmo && this.toxic) {
+                game.enemies.damageAll(randomInRange(2, 6) * this.damageMultiplier * this.toxicrate);
+            }
+        }, 500);
+    }
+
+    init() {
         this.airstrike = false;
         this.bomb = false;
         this.darts = false;
@@ -150,15 +161,6 @@ export class ItemActionController {
                 game.bluelasers.add(new weapon(direction + SPRAYDISTANCE * spraycount));
             }
         }
-    }
-
-    startToxic() {
-        this.toxic = true;
-        setInterval(() => {
-            if (game.state.slowmo && this.toxic) {
-                game.enemies.damageAll(randomInRange(2, 6) * this.damageMultiplier * this.toxicrate);
-            }
-        }, 500);
     }
 
     stunWithDart(laser, enemy) {
