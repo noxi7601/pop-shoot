@@ -134,7 +134,11 @@ export class Fk77 extends Enemy {
 
     die() {
         super.die();
-        clearTimeout(this.softenTimeout);
+        this.cleanup();
         game.state.toggleBoss();
+    }
+
+    cleanup() {
+        clearTimeout(this.softenTimeout);
     }
 }

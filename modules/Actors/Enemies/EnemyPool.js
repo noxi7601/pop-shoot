@@ -33,12 +33,19 @@ export class EnemyPool {
         });
     }
 
-    // if noCash variable is set to true, the enemies array will be cleared (used for replay after game-over)
-    // if set to false, the enemies will be killed normally & cash will be counted (used after killing bosses)
     clear(noCash) {
+        // noCash = true, enemies are cleared & cash is not counted
         if (noCash) {
-            this.liveEnemies = [];
-        } else {
+            this.liveEnemies = this.liveEnemies.filter((enemy) => {
+                // cleanup() function clears trailing boss timeouts & long-lasting sounds
+                if (enemy.cleanup !== undefined) {
+                    enemy.cleanup();
+                }
+                return false;
+            });
+        }
+        // noCash = false, enemies are killed normally & cash will be counted
+        else {
             this.liveEnemies.forEach((enemy) => (enemy.hp = 0));
         }
     }

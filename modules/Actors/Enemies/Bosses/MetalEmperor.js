@@ -146,7 +146,11 @@ export class MetalEmperor extends Enemy {
 
     die() {
         super.die();
-        clearTimeout(this.softenTimeout);
+        this.cleanup();
         game.state.toggleBoss();
+    }
+
+    cleanup() {
+        clearTimeout(this.softenTimeout);
     }
 }
