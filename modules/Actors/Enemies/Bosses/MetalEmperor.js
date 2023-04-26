@@ -139,13 +139,14 @@ export class MetalEmperor extends Enemy {
         this.sprite = METALEMPERORHARDENEDSPRITE;
         SceneUtils.shakeScreen(3, 0.5);
 
-        setTimeout(() => {
+        this.softenTimeout = setTimeout(() => {
             this.soften();
         }, HARDEN_TIME);
     }
 
     die() {
         super.die();
+        clearTimeout(this.softenTimeout);
         game.state.toggleBoss();
     }
 }

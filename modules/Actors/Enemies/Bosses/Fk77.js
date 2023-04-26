@@ -127,13 +127,14 @@ export class Fk77 extends Enemy {
         this.sprite = FK77HARDENEDSPRITE;
         SceneUtils.shakeScreen(3, 0.5);
 
-        setTimeout(() => {
+        this.softenTimeout = setTimeout(() => {
             this.soften();
         }, HARDEN_TIME);
     }
 
     die() {
         super.die();
+        clearTimeout(this.softenTimeout);
         game.state.toggleBoss();
     }
 }

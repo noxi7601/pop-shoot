@@ -166,13 +166,14 @@ export class FamiliarSight extends Enemy {
         SceneUtils.flashScreen();
         SceneUtils.shakeScreen(3, 0.5);
 
-        setTimeout(() => {
+        this.softenTimeout = setTimeout(() => {
             this.soften();
         }, HARDEN_TIME);
     }
 
     die() {
         super.die();
+        clearTimeout(this.softenTimeout);
         game.audiocontroller.stopSound('familiarMg');
         game.state.toggleBoss();
     }

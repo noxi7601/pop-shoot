@@ -145,7 +145,7 @@ export class Abuser extends Enemy {
         this.hardened = true;
         SceneUtils.shakeScreen(3, 0.5);
 
-        setTimeout(() => {
+        this.softenTimeout = setTimeout(() => {
             this.soften();
         }, HARDEN_TIME);
     }
@@ -155,6 +155,7 @@ export class Abuser extends Enemy {
 
     die() {
         super.die();
+        clearTimeout(this.softenTimeout);
         game.audiocontroller.stopSound('siren');
         game.state.toggleBoss();
     }
