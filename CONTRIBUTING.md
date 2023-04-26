@@ -34,5 +34,5 @@ Below are some areas of the game that can currently be improved:
     [Scene's elements](https://github.com/kiwphi/pop-shoot/tree/main/modules/Scene/Elements) have their coordinates calculated dynamically instead of
     hard-coded as they currenlty are. I'm not sure how this could be tackled since there's also the size of the imported assets to be taken into consideration.
 
--   The currently used [assets](https://github.com/kiwphi/pop-shoot/tree/main/assets) are all royalty-free and provided generously by their
-    respective authors. It would be awesome to have original synthwave-styled pixel-art assets just for pop-shoot.
+-   The currently used [sprites](https://github.com/kiwphi/pop-shoot/tree/main/assets/sprites) are all royalty-free and provided generously by their
+    respective authors. It would be awesome to have original synthwave-styled pixel-art sprites just for pop-shoot.
