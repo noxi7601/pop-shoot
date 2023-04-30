@@ -6,6 +6,10 @@ const SLOWMORATE = 0.2; // default rate. lower = slower. 1 = Fullspeed
 
 export class SlowmoController {
     constructor() {
+        this.init();
+    }
+
+    init() {
         this.slowmorate = SLOWMORATE;
     }
 

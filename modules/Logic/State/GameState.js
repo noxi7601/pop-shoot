@@ -139,6 +139,7 @@ export class GameState {
         game.itemdropcontroller.init();
         game.itemactioncontroller.init();
         game.cashcontroller.init();
+        game.slowmocontroller.init();
 
         // graphics
         SceneUtils.flashScreen();

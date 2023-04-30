@@ -121,6 +121,7 @@ export class Debugging {
             if (evt.code === CLEARITEMSBUTTON) {
                 game.itemdropcontroller.init();
                 game.itemactioncontroller.init();
+                game.slowmocontroller.init();
                 game.player.clock.init();
                 game.player.shotgun.init();
             }
